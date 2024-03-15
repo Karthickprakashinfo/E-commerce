@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Style.css'
-import './Main.js'
 import Search from '../Assets/search-line.png'
 import Cart from '../Assets/shopping-cart-line.png'
 import Account from '../Assets/account-circle-line.png'
@@ -33,6 +32,7 @@ function Home() {
         setIcon(false)
     }
   return (
+    
     <div>
         <header>
         <h2>Wee-Wee</h2>
@@ -304,6 +304,7 @@ function Home() {
     </section>
 
     </div>
+    
   )
 }
 
