@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Style.css'
 import './Main.js'
 import Search from '../Assets/search-line.png'
@@ -22,25 +22,35 @@ import img5 from '../Assets/5.jpg'
 import img6 from '../Assets/6.jpg'
 import img7 from '../Assets/7.jpg'
 import img8 from '../Assets/8.jpg'
+
+
 function Home() {
+    const[icon, setIcon] = useState(false)
+    const handleClick = () => {
+        setIcon(!icon)
+    }
+    const closeSideDrawer = () => {
+        setIcon(false)
+    }
   return (
     <div>
         <header>
         <h2>Wee-Wee</h2>
-        <ul className="nav-menu">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Shopping">Shop</a></li>
-            <li><a href="#Reviews">Review</a></li>
-            <li><a href="#Update">Update</a></li>
-            <li><a href="#Contact">Contact</a></li>
+        
+        <ul className={icon ? 'nav-menu active' : 'nav-menu'}>
+            <li><a href="#Home" onClick={closeSideDrawer}>Home</a></li>
+            <li><a href="#Shopping" onClick={closeSideDrawer}>Shop</a></li>
+            <li><a href="#Reviews" onClick={closeSideDrawer}>Review</a></li>
+            <li><a href="#Update" onClick={closeSideDrawer}>Update</a></li>
+            <li><a href="#Contact" onClick={closeSideDrawer}>Contact</a></li>
         </ul>
         <div className="icons">
             <img src={Search} alt='No img'/>
             <img src={Cart} alt='No img'/>
             <img src={Account} alt='No img'/>
         </div>
-        <div className="bc bx-menu" id="menu-icon">
-            <img src={Menu} alt='No img'/>
+        <div className='bc bx-menu' id="menu-icon" onClick={handleClick}>
+            <img src={Menu} alt='no img'/> 
         </div>
     </header>
 
