@@ -54,7 +54,7 @@ function Home() {
         </div>
     </header>
 
-    <section class="homepage">
+    <section class="homepage" id='Home'>
         <div class="main text">
             <h2>Winter Collections</h2>
             <h5>New Winter <br/> Collection</h5>
@@ -62,7 +62,7 @@ function Home() {
         </div>
     </section>
 
-    <section className="products-page">
+    <section className="products-page" id='Shopping'>
         <div className="products">
             <div className="detail">
                 <div className="row">
@@ -211,7 +211,7 @@ function Home() {
 
     
 
-    <section className="review-section">
+    <section className="review-section" id='Reviews'>
         <div className="reviews">
             <h3>Client Reviews</h3>
             <img src={Bill} alt='img'/>
@@ -224,7 +224,7 @@ function Home() {
 
     </section>
 
-    <section className="update-news">
+    <section className="update-news" id='Contact'>
         <div className="up-center-text">
             <h2>New Updates</h2>
         </div>
@@ -258,7 +258,7 @@ function Home() {
 
 
 
-    <section className="contact">
+    <section className="contact" id='Contact'>
         <div className="contact-info">
             <div className="first-info">
                 <h2>Wee-Wee</h2>
